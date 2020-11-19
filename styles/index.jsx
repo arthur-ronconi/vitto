@@ -185,6 +185,10 @@ export const Title = styled.div`
   font: normal normal normal 25px/29px Rubik;
   color: #222222;
   margin-bottom: 1rem;
+  display: none;
+  @media (min-width: ${media.lg}) {
+    display: block;
+  }
 `;
 export const CardGroup = styled.div`
   display: flex;
@@ -198,7 +202,6 @@ export const CardGroup = styled.div`
 `;
 export const MainCard = styled(Card)`
   flex-direction: column;
-  /* margin-bottom: 1rem; */
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -288,3 +291,22 @@ export const CardLink = styled.a`
   flex: 1;
   flex-direction: column;
 `;
+
+export const BottomNavigation = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4rem;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px #00000029;
+  justify-content: space-around;
+  align-items: center;
+  @media (min-width: ${media.lg}) {
+    display: none;
+  }
+`;
+export const BottomNavLink = styled.a``;
+export const BottomNavIcon = styled.img``;
